@@ -1,0 +1,31 @@
+version: '2'
+services:
+  db:
+    restart: on-failure
+    build: ./docker/db
+    ports:
+      - "5438:5432"
+
+  nginx:
+    restart: on-failure
+    build: ./docker/nginx
+    ports:
+      - "8085:80"
+    volumes_from:
+      - app
+    links:
+      - app:app
+
+  app:
+    image: python:3.5.2
+    restart: on-failure
+    build: .
+    command: gunicorn -b 0.0.0.0:8000 app:app --reload --log-level debug
+    volumes:
+      - .:/code/
+    ports:
+      - "8001:8000"
+    expose:
+      - "8001"
+    depends_on:
+      - db

@@ -1,0 +1,11 @@
+python==3.5.2
+cython==0.25
+falcon==1.0.0
+psycopg2==2.6.2
+uwsgi==2.0.13.1
+gunicorn==19.6.0
+sqlalchemy==1.1.4
+bcrypt==1.1.1
+shortuuid==0.4.2
+cryptography==1.5.3
+cerberus==0.9

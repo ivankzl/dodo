@@ -1,0 +1,20 @@
+# use glob syntax.
+syntax: glob
+
+*.pyc
+*.swp
+*.zip
+*.tar.gz
+*.coverage
+*.orig
+*.log
+celerybeat*
+
+.idea
+.venv
+.python-version
+.project
+.pydevproject
+.settings
+.vagran
+provisioning
