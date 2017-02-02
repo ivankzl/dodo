@@ -26,3 +26,4 @@ Recursos de la API (endpoints)
 * GET /api/v1/status
 --> Devuelve el estado de la conexión a la base de datos
 
+curl -XGET http://localhost:8001/api/v1/status
